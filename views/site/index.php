@@ -56,13 +56,12 @@ $this->title = 'My Yii Application';
             <div class="spoiler-head" onselectstart="return false">Описание полей таблицы</div>
             <div class="spoiler-body">
                 <ul>
-                    <li><b>id</b> - Первсичный ключ</li>
-                    <li><b>date</b> - Дата и время игры, устанавливается автоматически</li>
-                    <li><b>player_name</b> - Никнейм игрока, может быть NULL,
-                        никнейм необезателен так как у каждой игры есьт дата</li>
-                    <li><b>score</b> - Количество очков</li>
-                    <li><b>data</b> - Текстовая строка длиной до 500 символов, можешь хранить
-                        в ней все что захочешь, например длительность матча или сделаные ходы</li>
+                    <li><b>id</b> - Первичный ключ</li>
+                    <li><b>date</b> - Дата и время игры (устанавливается автоматически)</li>
+                    <li><b>name</b> - Никнейм игрока (может быть NULL)</li>
+                    <li><b>score</b> - Количество очков (может быть NULL)</li>
+                    <li><b>info</b> - Текстовая строка длиной до 500 символов, можешь хранить в ней все что захочешь,
+                        например длительность матча или сделаные ходы (может быть NULL)</li>
                 </ul>
             </div>
         </div>
@@ -71,18 +70,18 @@ $this->title = 'My Yii Application';
             <tr>
                 <th>id</th>
                 <th>date</th>
-                <th>player_name</th>
+                <th>name</th>
                 <th>score</th>
-                <th>data</th>
+                <th>info</th>
             </tr>
             <?php
                 foreach ($games as $game) {
                     echo '<tr>';
                     echo '<td>' . $game['id'] . '</td>';
                     echo '<td>' . $game['date'] . '</td>';
-                    echo '<td>' . htmlentities($game['player_name']) . '</td>';
+                    echo '<td>' . htmlentities($game['name']) . '</td>';
                     echo '<td>' . $game['score'] . '</td>';
-                    echo '<td>' . htmlentities($game['data']) . '</td>';
+                    echo '<td>' . htmlentities($game['info']) . '</td>';
                     echo '</tr>';
                 }
             ?>

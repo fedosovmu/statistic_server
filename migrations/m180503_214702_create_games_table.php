@@ -15,9 +15,9 @@ class m180503_214702_create_games_table extends Migration
         $this->createTable('games', [
             'id' => $this->primaryKey(),
             'date'=>$this->string(),
-            'player_name'=>$this->string(),
+            'name'=>$this->string(),
             'score'=>$this->integer(),
-            'data'=>$this->text(),
+            'info'=>$this->text(),
         ]);
     }
 

@@ -53,7 +53,7 @@ $this->title = 'My Yii Application';
             Если хочешь узнать о том как работать с API, перейди на вкладку API</p>
 
         <div class="spoiler-wrap disabled">
-            <div class="spoiler-head">Описание полей таблицы</div>
+            <div class="spoiler-head" onselectstart="return false">Описание полей таблицы</div>
             <div class="spoiler-body">
                 <ul>
                     <li><b>id</b> - Первсичный ключ</li>

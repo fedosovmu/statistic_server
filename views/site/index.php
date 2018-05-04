@@ -33,6 +33,15 @@ $this->title = 'My Yii Application';
     .spoiler-wrap.disabled .spoiler-body{display:none}
     .spoiler-wrap.active{border-color:#4CAF50}
     .spoiler-wrap.active .spoiler-head{background:#4CAF50;color:#fff}
+
+    .web-api{
+        width: 100%;
+        height: 100%;
+        border: 1px solid blue;
+    }
+    .web-api_item {
+        border: 1px solid red;
+    }
 </style>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -63,6 +72,20 @@ $this->title = 'My Yii Application';
                     <li><b>info</b> - Текстовая строка длиной до 500 символов, можешь хранить в ней все что захочешь,
                         например длительность матча или сделаные ходы (может быть NULL)</li>
                 </ul>
+            </div>
+        </div>
+
+        <div class="spoiler-wrap disabled">
+            <div class="spoiler-head" onselectstart="return false">Web API</div>
+            <div class="spoiler-body">
+                <div class="web-api">
+                    <div class="web-api_item">
+                        Вставить
+                    </div>
+                    <div class="web-api_item">
+                        Удалить
+                    </div>
+                </div>
             </div>
         </div>
 

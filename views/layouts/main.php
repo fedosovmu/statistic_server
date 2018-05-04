@@ -58,7 +58,6 @@ AppAsset::register($this);
     <div class="container">
         <p class="pull-left">&copy; УРАГАН</p>
 
-        <p class="pull-right"><?= Yii::powered() ?></p>
     </div>
 </footer>
 

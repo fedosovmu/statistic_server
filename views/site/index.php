@@ -34,6 +34,30 @@ $this->title = 'My Yii Application';
     .spoiler-wrap.active{border-color:#4CAF50}
     .spoiler-wrap.active .spoiler-head{background:#4CAF50;color:#fff}
 
+
+    .table-form{
+        width: 100%;
+        margin: 10px;
+    }
+    .table-form td {
+        vertical-align: top;
+        padding: 10px;
+        line-height: 2;
+    }
+    .table-form input {
+        width: 70%;
+        line-height: 1.5;
+    }
+
+
+    .caption {
+        width: 50px;
+        display: inline-block;
+    }
+    .submit-input {
+        width: 100%;
+    }
+
 </style>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -70,13 +94,41 @@ $this->title = 'My Yii Application';
         <div class="spoiler-wrap disabled">
             <div class="spoiler-head" onselectstart="return false">Web API</div>
             <div class="spoiler-body">
-
-                <fieldset>
-                    <legend>Вставить</legend>
-                    id <input><button>sumbit</button>
-                </fieldset>
+                <table class="table-form">
+                    <tr>
+                        <td>
+                            <form method="post">
+                                <b>Вставить</b><br>
+                                <div class="caption">name</div> <input><br>
+                                <div class="caption">score</div> <input><br>
+                                <div class="caption">info</div> <input><br>
+                                <div class="caption"></div> <input class="submit-input" type="submit" value="Отправить">
+                            </form>
+                        </td>
+                        <td>
+                            <form method="put">
+                                <b>Изменить</b><br>
+                                <div class="caption">id</div> <input type="text"><br>
+                                <div class="caption">name</div> <input><br>
+                                <div class="caption">score</div> <input><br>
+                                <div class="caption">info</div> <input><br>
+                                <div class="caption">date</div> <input><br>
+                                <div class="caption"></div> <input class="submit-input" type="submit" value="Отправить">
+                            </form>
+                        </td>
+                        <td>
+                            <form method="delete">
+                                <b>Удалить</b><br>
+                                <div class="caption">id</div> <input><br>
+                                <div class="caption"></div> <input type="submit" value="Отправить">
+                            </form>
+                        </td>
+                    </tr>
+                </table>
             </div>
         </div>
+
+
 
         <table class="player_table">
             <tr>
